@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>CYBERSPACE</title>
+  <link rel="icon" href="../assets/logo/logo_title.png" type="image/icon">
+  
+  <style>
+    body {
+      background-image: url('../assets/background/bg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fade-in effect */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px); /* Optional upward movement */
+      transition: opacity 1.5s ease, transform 1.5s ease; /* Smooth transition */
+    }
+
+    .fade-in-visible {
+      opacity: 1;
+      transform: translateY(0); /* Reset upward movement */
+    }
+  </style>
+</head>
+
+<body class="text-gray-900 bg-black bg-opacity-80">
+  <!-- Navbar -->
+  <nav class="bg-black bg-opacity-80">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-20 items-center justify-between">
+        <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
+            <div class="flex-shrink-0 sm:hidden">
+                <a href="/">
+                  <img class="h-8 w-auto" src="/assets/logo/logo.png" alt="Mobile Logo">
+                </a>
+              </div>
+              <div class="hidden sm:flex sm:items-center">
+                <a href="/">
+                  <img class="h-16 w-auto" src="/assets/logo/logo.png" alt="Desktop Logo">
+                </a>
+              </div>
+              
+        </div>
+  
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-4 sm:items-center">
+            <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="/about/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="/partners/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Partners</a>
+            <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+        </div>
+  
+        <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+          <button id="mobile-menu-button" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm:hidden hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+        <a href="/about/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+        <a href="/partners/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Partners</a>
+        <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Add fade-in effect after DOM content is fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".fade-in");
+      elements.forEach(element => {
+        element.classList.add("fade-in-visible");
+      });
+    });
+  </script>
+
+<div class="flex-grow">
+    <!-- Partners Section -->
+    <section class="bg-black bg-opacity-80 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-4xl font-extrabold text-gray-100 fade-in">Our Partners</h2>
+          <p class="mt-8 text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto fade-in">
+            We collaborate with the following IT companies to bring you top-tier technology solutions:
+          </p>
+  
+          <!-- Partners Logos -->
+          <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-16"> <!-- Increased gap from 8 to 16 -->
+            <!-- Partner Logos -->
+            <div class="flex justify-center fade-in">
+                <img src="../assets/partners/hp.png" alt="HP" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Dell.png" alt="Dell" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Lenovo.png" alt="Lenovo" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/acer.png" alt="Acer" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/PeopleLink.png" alt="PeopleLink" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/benq.png" alt="BenQ" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/vgyaan.png" alt="VGYAAN" class="h-24 object-contain">
+              </div>
+
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/vaama.png" alt="vaama" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Canon.jpg" alt="canon" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/epson.png" alt="Epson" class="h-24 object-contain">
+              </div>
+
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/ricoh.png" alt="Ricoh" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/sharp.png" alt="Sharp" class="h-24 object-contain">
+              </div>
+
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/apc.png" alt="APC" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/numeric.png" alt="Numeric" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Emerson.svg" alt="Emerson" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/exide.jpg" alt="Exide" class="h-24 object-contain">
+              </div>
+
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/asus.svg" alt="Asus" class="h-24 object-contain">
+              </div>
+
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/lg.png" alt="LG" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Samsung.png" alt="Samsung" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/zebronics.png" alt="zebronics" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/viewsonic.svg" alt="ViewSonic" class="h-24 object-contain">
+              </div>
+            
+    
+            
+            <div class="flex justify-center fade-in">
+              <img src="../assets/partners/Hitachi.png" alt="Hitachi" class="h-24 object-contain">
+            </div>
+           
+            <div class="flex justify-center fade-in">
+              <img src="../assets/partners/Infocus.png" alt="InFocus" class="h-24 object-contain">
+            </div>
+            <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Toshiba.png" alt="Toshiba" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/cisco.png" alt="cisco" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/hpearuba.jpg" alt="hpearuba" class="h-24 object-contain">
+              </div>
+            <div class="flex justify-center fade-in">
+                <img src="../assets/partners/dlink.jpg" alt="D-Link" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Netgear.png" alt="Netgear" class="h-24 object-contain">
+              </div>
+            
+      
+            <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Microsoft.png" alt="Microsoft" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/tally.png" alt="tally" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Quickheal.png" alt="Quickheal" class="h-24 object-contain">
+              </div>
+
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/Oracle.png" alt="Oracle" class="h-24 object-contain">
+              </div>
+
+            <div class="flex justify-center fade-in">
+                <img src="../assets/partners/ahuja.png" alt="Ahuja" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/ekin.png" alt="ekin" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/JBL.svg" alt="JBL" class="h-24 object-contain">
+              </div>
+              <div class="flex justify-center fade-in">
+                <img src="../assets/partners/logitech.png" alt="logitech" class="h-24 object-contain">
+              </div>
+          
+
+              <!-- More partners continue here -->
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+  <!-- Footer Section -->
+  <footer class="bg-black text-gray-400 bg-opacity-80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center">
+        <p class="text-lg">&copy; 2024 Cyber Space. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
